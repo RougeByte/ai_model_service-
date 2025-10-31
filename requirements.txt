@@ -1,7 +1,8 @@
 flask==2.3.2
 gunicorn==20.1.0
 transformers==4.40.0
-torch            # let pip choose compatible version for Render build
+torch
 joblib
 numpy
 scikit-learn
+tokenizers==0.19.1
