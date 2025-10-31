@@ -132,5 +132,8 @@ def check_ddi():
 
 # --- SERVER STARTUP ---
 if __name__ == '__main__':
-    print("Starting Flask server...")
-    app.run(debug=False, port=5000, host='0.0.0.0')
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    print(f"Starting Flask server on port {port}...")
+    app.run(debug=False, host="0.0.0.0", port=port)
+
