@@ -1,10 +1,8 @@
---only-binary=tokenizers
-
 flask==2.3.2
 gunicorn==20.1.0
-transformers==4.40.0
+transformers==4.44.2
 torch
 joblib
 numpy
 scikit-learn
-tokenizers==0.19.1 --only-binary=:all:
+tokenizers==0.22.1
