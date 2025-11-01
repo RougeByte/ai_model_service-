@@ -1,17 +1,18 @@
-# Use the official lightweight Python image.
+# Use lightweight Python image
 FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy all files to the container
+# Copy app files
 COPY . .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port used by Flask
-EXPOSE 8080
+# Expose the port Cloud Run expects
+ENV PORT=8080
+EXPOSE 8080   # 👈 This line is required so Flask binds correctly
 
-# Run the Flask app
+# Start the Flask app
 CMD ["python", "ai_service.py"]
