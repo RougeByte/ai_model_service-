@@ -4,7 +4,7 @@ gunicorn==23.0.0
 
 # --- Core AI / ML Stack ---
 transformers==4.46.2
-torch==2.9.0
+torch==2.4.1
 tokenizers==0.20.3
 scikit-learn==1.6.1
 numpy==2.1.3
