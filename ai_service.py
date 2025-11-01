@@ -189,4 +189,4 @@ def check_ddi():
 if __name__ == '__main__':
     # CRITICAL FIX: Binding to 0.0.0.0 allows Node.js to communicate
     print("Starting Flask server...")
-    app.run(debug=True, port=5000, host='0.0.0.0') 
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080))) 
